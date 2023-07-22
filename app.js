@@ -1,28 +1,33 @@
-'use strict'
+'use strict';
 
-//Cargar modulos de node para crear el servidor
-
+// Cargar módulos de node para crear el servidor
 const express = require('express');
 const bodyParser = require('body-parser');
 
-//Ejecutar express (http)
-const app= express();
 
 
-//Cargar ficheros rutas
-const product_router= require('./routes/product');
 
-//Middlewares se ejecuta antes de cargar una ruta
-app.use(bodyParser.urlencoded({extended:false}));
+
+// Ejecutar express (http)
+const app = express();
+const cors = require('cors');
+
+
+// Habilitar CORS para todas las solicitudes
+app.use(cors());
+// Cargar ficheros rutas
+const product_router = require('./routes/product');
+
+
+// Middlewares se ejecutan antes de cargar una ruta
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+// CORS - Permitir peticiones desde el frontend
 
-//CORS permitir peticiones desde el fronted
-
-
-//Añadir prefijos a las rutas / cargar rutas
-app.use('/api',product_router);
+// Añadir prefijos a las rutas / cargar rutas
+app.use('/api', product_router);
 
 
-//Exportar modulo (fichero actual)
+// Exportar módulo (fichero actual)
 module.exports = app;
