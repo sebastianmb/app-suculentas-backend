@@ -13,12 +13,12 @@ const controller = {
     const promises = [];
 
     // Procesa cada producto en el array de compras
-    compras.forEach((producto) => {
+    compras.forEach((product) => {
       // Crea una nueva instancia del modelo de compra con los datos recibidos
       const nuevaCompra = new Compra({
-        producto: producto.name,
-        cantidad: producto.quantity,
-        precio: producto.price,
+        producto: product.name,
+        cantidad: product.quantity,
+        precio: product.price,
       });
 
       // Guarda la compra en la base de datos y agrega la promesa al array

@@ -4,9 +4,9 @@ const Schema= mongoose.Schema;
 
 
 const ProductSchema= Schema({
-    name:String,
-    quantity: String,
-    price: Number,
+    producto:String,
+    cantidad: String,
+    precio: Number,
         
 });
 

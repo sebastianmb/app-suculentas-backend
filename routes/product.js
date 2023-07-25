@@ -8,6 +8,6 @@ const router= express.Router();
 
 router.get('/products',ProductController.getProducts);
 router.get('/pot',ProductController.getPot);
-router.post('/compras',ProductController.getCompras)
+
 
 module.exports=router;

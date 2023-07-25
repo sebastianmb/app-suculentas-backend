@@ -6,6 +6,6 @@ const CompraController= require('../controllers/compra');
 
 const router= express.Router();
 
-router.post('/compras',CompraController.getCompras)
+router.post('/compras',CompraController.getCompras);
 
 module.exports=router;
