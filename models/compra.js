@@ -11,6 +11,7 @@ const ProductSchema= Schema({
 });
 
 
+
 module.exports= mongoose.model('Compra', ProductSchema);
 
 // Products ---> guarda documentos de este tipo y con la estructura dentro de la coleccion

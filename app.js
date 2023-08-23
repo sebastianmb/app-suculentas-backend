@@ -18,6 +18,7 @@ app.use(cors());
 // Cargar ficheros rutas
 const product_router = require('./routes/product');
 const compra_router = require('./routes/compra');
+const signature_router = require('./routes/signature');
 
 
 // Middlewares se ejecutan antes de cargar una ruta
@@ -29,6 +30,7 @@ app.use(bodyParser.json());
 // Añadir prefijos a las rutas / cargar rutas
 app.use('/api', product_router);
 app.use('/api', compra_router);
+app.use('/api', signature_router);
 
 
 // Exportar módulo (fichero actual)
